@@ -20,16 +20,16 @@ function Button({
   return (
     <button
       className={cn(
-        "inline-flex items-center px-4 py-2 rounded font-medium transition-colors cursor-pointer",
+        "inline-flex cursor-pointer items-center rounded px-4 py-2 font-medium transition-colors",
         {
           "bg-blue-600 text-white hover:bg-blue-700": variant === "primary",
           "bg-gray-100 text-gray-800 hover:bg-gray-200":
             variant === "secondary",
-          "bg-white text-gray-900 border border-gray-300 hover:bg-gray-50":
+          "border border-gray-300 bg-white text-gray-900 hover:bg-gray-50":
             variant === "default",
-          "opacity-60 cursor-not-allowed pointer-events-none": isDisabled,
+          "pointer-events-none cursor-not-allowed opacity-60": isDisabled,
           relative: loading,
-        }
+        },
       )}
       disabled={isDisabled}
       {...props}
